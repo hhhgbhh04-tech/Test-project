@@ -1,5 +1,6 @@
 import random
 import time
+import hashlib
 from urllib.parse import urlparse
 
 class HeaderBuilder:
@@ -88,4 +89,4 @@ class HeaderBuilder:
         return random.random() > 0.85
     
     def rotate(self, fingerprint, browser):
-        return self.build(fingerprint, browser)
+        return self.build(fingerprint, browser) 
