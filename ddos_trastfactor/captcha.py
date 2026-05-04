@@ -62,7 +62,7 @@ class CaptchaSolver:
             return html
         
         answer_str = str(result)
-        input_pattern = r'<input[^>]*name=["']?(?:captcha|answer|result)["']?[^>]*>'
+        input_pattern = r'<input[^>]*name=["\']?(?:captcha|answer|result)["\']?[^>]*>'
         
         def replace_input(m):
             tag = m.group(0)
@@ -99,7 +99,7 @@ class CaptchaSolver:
         else:
             return html
         
-        input_pattern = r'<input[^>]*name=["']?(?:captcha|code|verification)["']?[^>]*>'
+        input_pattern = r'<input[^>]*name=["\']?(?:captcha|code|verification)["\']?[^>]*>'
         
         def replace_input(m):
             tag = m.group(0)
@@ -118,4 +118,4 @@ class CaptchaSolver:
     
     def reset(self):
         self.solved_count = 0
-        self.failed_count = 0
+        self.failed_count = 0 
